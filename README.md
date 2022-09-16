@@ -6,3 +6,5 @@
   - Re-review requirements for CR submission, setup new project repo and initial README (currently used as 'research & planning log').
 - 8:40AM:
   - Work on project proposal.
+- 10:20AM:
+  - Research conversion tool options
