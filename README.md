@@ -10,3 +10,7 @@
   - Research conversion tool options.
 - 10:44AM:
   - Switch to creating a bare-bones conversion app as proof of concept and for environment to facilitate better design brainstorming.
+- 12:05PM:
+  - WIP commit, prior to adding private API key to test bank project.
+- 01:15PM:
+  - WIP commit, continue bank test (conversion tool)
