@@ -13,4 +13,8 @@
 - 12:05PM:
   - WIP commit, prior to adding private API key to test bank project.
 - 01:15PM:
-  - WIP commit, continue bank test (conversion tool)
+  - WIP commit, continue bank test (conversion tool).
+- 01:15PM:
+  - WIP commit, succesfully reach API for bank test (api provider appears to have been purchased by another company that added their own pathname into the orginal API route but did not update documentation to reflect this change).
+- 2:35PM
+  - Switch to MVP design mockups.
