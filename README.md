@@ -19,4 +19,6 @@
 - 2:35PM
   - Switch to MVP design mockups.
 - 4:05PM
-  - Continuing work on design, mockups, and researching relevant branding color-methods
+  - Continuing work on design, mockups, and researching relevant branding color-methods.
+- 4:50PM
+  - Organize files, notes and prep to submit proposal.
