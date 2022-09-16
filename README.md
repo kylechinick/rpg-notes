@@ -18,3 +18,5 @@
   - WIP commit, succesfully reach API for bank test (api provider appears to have been purchased by another company that added their own pathname into the orginal API route but did not update documentation to reflect this change).
 - 2:35PM
   - Switch to MVP design mockups.
+- 4:05PM
+  - Continuing work on design, mockups, and researching relevant branding color-methods
