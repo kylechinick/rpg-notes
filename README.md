@@ -6,6 +6,10 @@
   - Tutorial on react app (includes paginating through data).
 - 9:30AM
   - Switch to conversion mini-app (for use in MVP)
+- 11:20AM
+  - Switch to conversion mini-app (for use in MVP)
+-11:45AM
+  - Break for lunch to reset – planning to start notes app base structure post-lunch.
 
 ## Friday, 09/16/2022
 
