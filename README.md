@@ -2,6 +2,11 @@
 
 ## Friday, 09/16/2022
 
+- 8:00AM
+  - Tutorial on react app (includes paginating through data).
+
+## Friday, 09/16/2022
+
 - 8:10AM
   - Re-review requirements for CR submission, setup new project repo and initial README (currently used as 'research & planning log').
 - 8:40AM
