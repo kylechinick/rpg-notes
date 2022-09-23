@@ -10,6 +10,8 @@
   - Switch to conversion mini-app (for use in MVP)
 -11:45AM
   - Break for lunch to reset – planning to start notes app base structure post-lunch.
+- 01:45PM
+  - Resume switch to basic notes structure/setup
 
 ## Friday, 09/16/2022
 
