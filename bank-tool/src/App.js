@@ -1,28 +1,48 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 function App() {
-  const [name, setName] = useState("");
+  const [inputs, setInputs] = useState({});
 
-  const handleSubmit = (event) => {
+  const handleChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({ ...values, [name]: value }));
+  };
+
+  const handleSubmit = event => {
     event.preventDefault();
-    alert(`The name you entered was: ${name}`)
-  }
+    console.log(inputs);
+  };
 
   return (
     <React.Fragment>
-    <form onSubmit={handleSubmit}>
-      <label>Enter your name:
-        <input 
-          type="text" 
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </label>
-      <input type="submit" />
-    </form>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Enter your name:
+          <input
+            type='text'
+            name='username'
+            value={inputs.username || ''}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Enter your age:
+          <input
+            type='number'
+            name='amount'
+            value={inputs.amount || ''}
+            onChange={handleChange}
+          />
+        </label>
+        <input type='submit' />
+      </form>
       <div>
-        <p>{name}</p>
+        <p>{inputs.username}</p>
+        <p>
+          Your {inputs.amount} silver worth {1/inputs.amount} gold
+        </p>
       </div>
     </React.Fragment>
   );
