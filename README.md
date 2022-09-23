@@ -1,9 +1,11 @@
 # Research & Planning Log
 
-## Friday, 09/16/2022
+## Friday, 09/23/2022
 
 - 8:00AM
   - Tutorial on react app (includes paginating through data).
+- 9:30AM
+  - Switch to conversion mini-app (for use in MVP)
 
 ## Friday, 09/16/2022
 
