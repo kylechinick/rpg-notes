@@ -7,11 +7,12 @@
 - 9:30AM
   - Switch to conversion mini-app (for use in MVP)
 - 11:20AM
-  - Switch to conversion mini-app (for use in MVP)
+  - WIP stuck but still working through mini-app.
 -11:45AM
   - Break for lunch to reset – planning to start notes app base structure post-lunch.
 - 01:45PM
-  - Resume switch to basic notes structure/setup
+  - Resume switch to basic notes structure/setup.
+  - Adjustment: couldn't let the form mini-app go, working with tutorial to help instead.
 
 ## Friday, 09/16/2022
 
