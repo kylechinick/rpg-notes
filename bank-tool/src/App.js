@@ -41,7 +41,19 @@ function App() {
       <div>
         <p>{inputs.username}</p>
         <p>
-          Your {inputs.amount} silver worth {1/inputs.amount} gold
+          Your {inputs.amount} silver worth {inputs.amount / 10} copper.
+        </p>
+        <p>
+          Your {inputs.amount} silver worth {inputs.amount / 1} silver.
+        </p>
+        <p>
+          Your {inputs.amount} silver worth {inputs.amount / 5} electrum.
+        </p>
+        <p>
+          Your {inputs.amount} silver worth {inputs.amount / 10} gold.
+        </p>
+        <p>
+          Your {inputs.amount} silver worth {inputs.amount / 100} platinum.
         </p>
       </div>
     </React.Fragment>
