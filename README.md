@@ -8,11 +8,15 @@
   - Switch to conversion mini-app (for use in MVP)
 - 11:20AM
   - WIP stuck but still working through mini-app.
--11:45AM
+    -11:45AM
   - Break for lunch to reset – planning to start notes app base structure post-lunch.
 - 01:45PM
   - Resume switch to basic notes structure/setup.
   - Adjustment: couldn't let the form mini-app go, working with tutorial to help instead.
+- 03:50PM
+  - Start separate notes-test app based on react help-queue app.
+- 04:11PM
+  - Firebase/firestore setup.
 
 ## Friday, 09/16/2022
 

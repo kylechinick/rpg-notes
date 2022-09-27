@@ -18,7 +18,7 @@ function App() {
   return (
     <React.Fragment>
       <form onSubmit={handleSubmit}>
-        <label>
+        {/* <label>
           Enter your name:
           <input
             type='text'
@@ -26,7 +26,7 @@ function App() {
             value={inputs.username || ''}
             onChange={handleChange}
           />
-        </label>
+        </label> */}
         <label>
           Enter your age:
           <input
@@ -39,7 +39,7 @@ function App() {
         <input type='submit' />
       </form>
       <div>
-        <p>{inputs.username}</p>
+        {/* <p>{inputs.username}</p> */}
         <p>
           Your {inputs.amount} silver worth {inputs.amount / 10} copper.
         </p>
