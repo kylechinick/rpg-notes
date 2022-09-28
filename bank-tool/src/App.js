@@ -28,7 +28,7 @@ function App() {
           />
         </label> */}
         <label>
-          Enter your age:
+          Enter an amount of silver coins:
           <input
             type='number'
             name='amount'
