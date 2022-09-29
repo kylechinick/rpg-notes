@@ -1,56 +1,77 @@
-# Research & Planning Log
+# RPG Notes (WIP name)
 
-## Tuesday, 09/27/2022
+By _**Kyle Chinick**_
 
-- 12:20PM
-  - Begin formal README updates
+## Summary
 
+Provide users an easy way to log the events, new characters and information encountered while playing a tabletop RPG.
 
-## Tuesday, 09/27/2022
+## Description
 
-- 5:00PM
-  - Merge and reset previous notes reference project (time was spent on 9/23 working to connect a homework project to Firebase to test storing data independently from group work – the branch I thought I'd created was never made so I opted to clone and rebuild manually). Prior project link: https://github.com/kylechinick/help-queue-with-hooks.
+This app provides users an easy way to take notes and keep a record of what happened during a tabletop RPG session.
 
-## Friday, 09/23/2022
+While there are many platforms for managing and playing RPGs (i.e. Roll20) and even more apps built solely for note-taking most apps in these categories do a sub-par job of facilitating an easy and quick notetaking process tailored to the type of information a player likely wants to keep a log of in regards to the events of an RPG session.
 
-- 8:00AM
-  - Tutorial on react app (includes paginating through data).
-- 9:30AM
-  - Switch to conversion mini-app (for use in MVP)
-- 11:20AM
-  - WIP stuck but still working through mini-app.
-    -11:45AM
-  - Break for lunch to reset – planning to start notes app base structure post-lunch.
-- 01:45PM
-  - Resume switch to basic notes structure/setup.
-  - Adjustment: couldn't let the form mini-app go, working with tutorial to help instead.
-- 03:50PM
-  - Start separate notes-test app based on react help-queue app.
-- 04:11PM
-  - Firebase/firestore setup.
+In contrast, this tool aims to not only provide users with the ablity to enter text into a text-field (as any standard note-taking app should) but it also minimizes the amount of friction encountered while trying to hurridily take notes mid-game by supplying the user with a number of quick-select note entry-types.
 
-## Friday, 09/16/2022
+Quick-select entry-types account for common events and types of information that are typically encountered in a tabletop RPG. Having immediate access to a preformatted note – which prompts the user for basic information relevant to the given entry type - minimizes the amount of time spent thinking about what information to capture and how to best format that info. This allows the player to keep up with the action without being bogged down by thinking through what types of information to capture and how best to organize that information.
 
-- 8:10AM
-  - Re-review requirements for CR submission, setup new project repo and initial README (currently used as 'research & planning log').
-- 8:40AM
-  - Work on project proposal.
-- 10:20AM
-  - Research conversion tool options.
-- 10:44AM
-  - Switch to creating a bare-bones conversion app as proof of concept and for environment to facilitate better design brainstorming.
-- 12:05PM
-  - WIP commit, prior to adding private API key to test bank project.
-- 01:15PM:
-  - WIP commit, continue bank test (conversion tool).
-- 01:15PM
-  - WIP commit, succesfully reach API for bank test (api provider appears to have been purchased by another company that added their own pathname into the orginal API route but did not update documentation to reflect this change).
-- 2:35PM
-  - Switch to MVP design mockups.
-- 4:05PM
-  - Continuing work on design, mockups, and researching relevant branding color-methods.
-- 4:50PM
-  - Organize files, notes and prep to submit proposal.
-- 5:30PM
-  - Consolidate final notes for the day, add competitor app links to notes for future review.
-  - _END OF DAY_
+### WIP Walkthrough
+
+The homepage provides links immediately create a new session log, view a collection of current campaign logs, access an item-storage manifest, and access a bank ledger (which includes an game-currency-converter tool).
+
+#### Session Logs
+
+The main feature a user will interact with is the session log.
+
+A session log represents the journal entries for a single RPG session. Playing a game on Thursday? You'll create and save a session log for Thursday's game. Playing again on Saturday? You'll create a seperate session log for Saturday.
+
+#### Campaigns
+
+All session logs are collected into a campaign component which displays all the session logs in a list that the user can interact with to view, edit, or delete logs as needed.
+
+#### Entry-Types
+
+Entries are saved to a session log.
+
+To reduce note-taking friction the app provides the user with several entry-types to speed up the recording process.
+
+- Text:
+  - A freeform text field. Provides a simple text box that the user can save a basic text note to.
+- New Character
+  - Optional image upload tool for art of the newly-met character.
+  - Individual text fields for the following:
+    - Name
+    - Occupation
+    - Race and/or Class
+    - Location Met
+    - Alignment
+- New Quest
+- Combat Encounter
+- Quest Completed
+- Loot Found
+
+---
+
+## Technologies Used
+
+- _HTML / CSS_
+- _Node_
+- _React_
+- _JavaScript / JSX_
+
+---
+
+## Setup/Installation Requirements
+
+1. Clone this repository to your desktop by executing `git clone https://github.com/kylechinick/rpg-notes.git` in your preferred terminal application.
+
+2. In the terminal, cd into the project directory then execute `npm install`.
+
+3. Execute `npm run start` to build and then run a development version of the app on your local machine.
+
+---
+
+## Known Bugs
+
+- N/A
