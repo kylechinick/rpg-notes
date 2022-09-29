@@ -2,6 +2,12 @@
 
 ## Tuesday, 09/27/2022
 
+- 12:20PM
+  - Begin formal README updates
+
+
+## Tuesday, 09/27/2022
+
 - 5:00PM
   - Merge and reset previous notes reference project (time was spent on 9/23 working to connect a homework project to Firebase to test storing data independently from group work – the branch I thought I'd created was never made so I opted to clone and rebuild manually). Prior project link: https://github.com/kylechinick/help-queue-with-hooks.
 
