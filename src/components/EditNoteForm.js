@@ -1,10 +1,12 @@
 import React from 'react';
 import ReusableForm from './ReusableForm';
-import EditableForm from './EditableForm';
+// import EditableForm from './EditableForm';
 import PropTypes from 'prop-types';
 
 function EditNoteForm(props) {
   const { note } = props;
+
+  // console.log(note);
 
   function handleEditNoteFormSubmission(event) {
     event.preventDefault();
