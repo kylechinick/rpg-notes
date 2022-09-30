@@ -1,5 +1,10 @@
 # Research & Planning Log
 
+## Friday, 09/30/2022
+
+- 8:20AM
+  - Begin project work for day.
+
 ## Thursday, 09/29/2022
 
 - 12:20PM
