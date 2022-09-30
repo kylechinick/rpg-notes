@@ -59,8 +59,8 @@ function NoteControl() {
           const jsDate = new Date(timeOpen);
           notes.push({
             name: doc.data().name,
-            origin: doc.data().origin,
-            issue: doc.data().issue,
+            entryType: doc.data().entryType,
+            noteText: doc.data().noteText,
             timeOpen: jsDate,
             formattedWaitTime: formatDistanceToNow(jsDate),
             id: doc.id

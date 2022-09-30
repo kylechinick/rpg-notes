@@ -8,8 +8,8 @@ function NewNoteForm(props) {
     event.preventDefault();
     props.onNewNoteCreation({
       name: event.target.name.value,
-      origin: event.target.origin.value,
-      issue: event.target.issue.value,
+      entryType: event.target.entryType.value,
+      noteText: event.target.noteText.value,
       timeOpen: serverTimestamp()
     });
   }

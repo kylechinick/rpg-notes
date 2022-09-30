@@ -7,10 +7,10 @@ function Note(props) {
     <>
       <div onClick={() => props.whenNoteClicked(props.id)}>
         <h1>{props.name}</h1>
-        <h2>Origin</h2>
-        <p>{props.origin}</p>
+        <h2>Entry Type</h2>
+        <p>{props.entryType}</p>
         <h2>Description</h2>
-        <p>{props.issue}</p>
+        <p>{props.noteText}</p>
         <p>Note Added: {props.formattedWaitTime} ago</p>
       </div>
     </>
@@ -19,8 +19,8 @@ function Note(props) {
 
 Note.propTypes = {
   name: PropTypes.string,
-  origin: PropTypes.string,
-  issue: PropTypes.string,
+  entryType: PropTypes.string,
+  noteText: PropTypes.string,
   formattedWaitTime: PropTypes.string,
   id: PropTypes.string,
   whenNoteClicked: PropTypes.func

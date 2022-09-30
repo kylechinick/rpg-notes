@@ -8,10 +8,10 @@ function NoteDetail(props) {
     <>
       <h1>Note Detail</h1>
       <h2>{note.name}</h2>
-      <h3>Origin</h3>
-      <p>{note.origin}</p>
+      <h3>Entry Type</h3>
+      <p>{note.entryType}</p>
       <h3>Description</h3>
-      <p>{note.issue}</p>
+      <p>{note.noteText}</p>
       <button onClick={onClickingEdit}>Update Note</button>
       <button onClick={() => onClickingDelete(note.id)}>Delete Note</button>
     </>

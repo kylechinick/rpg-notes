@@ -10,9 +10,9 @@ function NoteList(props) {
         <Note
           whenNoteClicked={props.onNoteSelection}
           name={note.name}
-          origin={note.origin}
+          entryType={note.entryType}
           formattedWaitTime={note.formattedWaitTime}
-          issue={note.issue}
+          noteText={note.noteText}
           id={note.id}
           key={note.id}
         />
