@@ -1,5 +1,6 @@
 import React from 'react';
 import ReusableForm from './ReusableForm';
+import EditableForm from './EditableForm';
 import PropTypes from 'prop-types';
 
 function EditNoteForm(props) {

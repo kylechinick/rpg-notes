@@ -116,7 +116,7 @@ function NoteControl() {
   if (auth.currentUser == null) {
     return (
       <React.Fragment>
-        <h1>You must be signed in to access the queue.</h1>
+        <h1>Sign in to view your saved session logs.</h1>
       </React.Fragment>
     );
   } else if (auth.currentUser != null) {
