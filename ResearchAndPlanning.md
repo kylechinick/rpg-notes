@@ -4,11 +4,12 @@
 
 - 8:20AM
   - Begin project work for day.
-  - React transition and animation tutorials (transition group and intersection observer tool)
+  - React transition and animation tutorials (transition group and intersection observer tool).
 - 9:30AM
-  - Work on updating the edit form to persist initial values (left as WIP)
+  - Work on updating the edit form to persist initial values (left as WIP).
 - 11:30AM
-  - Review current stucture to prep for nested lists refactor
+  - Review current stucture to prep for nested lists refactor.
+  - Revise input and prop names to prep for clearer refactor.
 
 ## Thursday, 09/29/2022
 
