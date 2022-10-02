@@ -2,6 +2,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: 1.7;
+  line-height: 1.6;
   /* border: 1px solid red; */
+  font-family: 'Fira Sans', sans-serif;
+
+
+}
+
+button {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
 }

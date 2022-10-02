@@ -1,11 +1,15 @@
 import React from 'react';
 import Note from './Note';
 import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import styled from 'styled-components';
+
+const ListContainer = styled.div`
+
+`;
 
 function NoteList(props) {
   return (
-    <>
+    <ListContainer>
       {props.noteList.map(note => (
         <Note
           whenNoteClicked={props.onNoteSelection}
@@ -17,7 +21,7 @@ function NoteList(props) {
           key={note.id}
         />
       ))}
-    </>
+    </ListContainer>
   );
 }
 

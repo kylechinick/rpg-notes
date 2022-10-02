@@ -15,7 +15,11 @@ import {
 } from 'firebase/firestore';
 import { db, auth } from '../firebase.js';
 import { formatDistanceToNow } from 'date-fns';
-// import styled from 'styled-components';
+import styled from 'styled-components';
+
+const NotesAppContainer = styled.div`
+  padding: 1rem;
+`;
 
 function NoteControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
@@ -157,10 +161,10 @@ function NoteControl() {
       buttonText = 'Add Note';
     }
     return (
-      <React.Fragment>
+      <NotesAppContainer>
         {currentlyVisibleState}
         {error ? null : <button onClick={handleClick}>{buttonText}</button>}
-      </React.Fragment>
+      </NotesAppContainer>
     );
   }
 }
