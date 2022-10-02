@@ -23,3 +23,9 @@ button {
 /* h1 {
   font-size: 3rem;
 } */
+
+.primaryActionButton {
+  /* display: block; */
+  width: fit-content;
+  align-self: flex-end;
+}

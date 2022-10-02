@@ -16,17 +16,20 @@ import {
 import { db, auth } from '../firebase.js';
 import { formatDistanceToNow } from 'date-fns';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const NotesAppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
   max-width: 80%;
 `;
 
-const PrimaryActionButton = styled.button`
-  float: right;
-`;
+// const PrimaryActionButton = styled.button`
+//   float: right;
+// `;
 
 function NoteControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
@@ -171,9 +174,16 @@ function NoteControl() {
       <NotesAppContainer>
         {currentlyVisibleState}
         {error ? null : (
-          <PrimaryActionButton onClick={handleClick}>
+          <motion.button
+            initial={{ x: 100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ ease: 'easeOut', duration: 2 }}
+            opacity
+            onClick={handleClick}
+            className='primaryActionButton'
+          >
             {buttonText}
-          </PrimaryActionButton>
+          </motion.button>
         )}
       </NotesAppContainer>
     );

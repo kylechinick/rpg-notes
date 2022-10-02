@@ -10,6 +10,10 @@ const NoteTitle = styled.h1`
   font-weight: 900;
 `;
 
+const ButtonsContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
 function NoteDetail(props) {
   const { note, onClickingDelete, onClickingEdit } = props;
   return (
@@ -20,22 +24,24 @@ function NoteDetail(props) {
       <p>{note.entryType}</p>
       <h3>Description</h3>
       <p>{note.noteText}</p>
-      <motion.button
-        initial={{ x: -100 }}
-        animate={{ x: 0 }}
-        transition={{ ease: 'easeOut', duration: 2 }}
-        onClick={onClickingEdit}
-      >
-        Update Note
-      </motion.button>
-      <motion.button
-        initial={{ x: -100 }}
-        animate={{ x: 0 }}
-        transition={{ ease: 'easeOut', duration: 2 }}
-        onClick={() => onClickingDelete(note.id)}
-      >
-        Delete Note
-      </motion.button>
+      <ButtonsContainer>
+        <motion.button
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ ease: 'easeOut', duration: 2 }}
+          onClick={onClickingEdit}
+        >
+          Update Note
+        </motion.button>
+        <motion.button
+          initial={{ x: -100 }}
+          animate={{ x: 0 }}
+          transition={{ ease: 'easeOut', duration: 2 }}
+          onClick={() => onClickingDelete(note.id)}
+        >
+          Delete Note
+        </motion.button>
+      </ButtonsContainer>
     </>
   );
 }
