@@ -1,5 +1,10 @@
 # Research & Planning Log
 
+## Sunday, 10/02/2022
+
+- 10:20AM
+  - Begin work for the day
+
 ## Friday, 09/30/2022
 
 - 8:20AM
