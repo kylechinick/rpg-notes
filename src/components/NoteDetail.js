@@ -14,6 +14,11 @@ const ButtonsContainer = styled.div`
   display: flex;
   align-items: center;
 `;
+
+const NoteDetailButton = styled.button`
+  background: none;
+  outline: 1px solid #333;
+`
 function NoteDetail(props) {
   const { note, onClickingDelete, onClickingEdit } = props;
   return (
@@ -25,14 +30,14 @@ function NoteDetail(props) {
       <h3>Description</h3>
       <p>{note.noteText}</p>
       <ButtonsContainer>
-        <motion.button
+        <NoteDetailButton as={motion.button}
           initial={{ x: -100 }}
           animate={{ x: 0 }}
           transition={{ ease: 'easeOut', duration: 2 }}
           onClick={onClickingEdit}
         >
           Update Note
-        </motion.button>
+        </NoteDetailButton>
         <motion.button
           initial={{ x: -100 }}
           animate={{ x: 0 }}
