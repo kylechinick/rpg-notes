@@ -18,7 +18,14 @@ import { formatDistanceToNow } from 'date-fns';
 import styled from 'styled-components';
 
 const NotesAppContainer = styled.div`
+  margin-left: auto;
+  margin-right: auto;
   padding: 1rem;
+  max-width: 80%;
+`;
+
+const PrimaryActionButton = styled.button`
+  float: right;
 `;
 
 function NoteControl() {
@@ -163,7 +170,11 @@ function NoteControl() {
     return (
       <NotesAppContainer>
         {currentlyVisibleState}
-        {error ? null : <button onClick={handleClick}>{buttonText}</button>}
+        {error ? null : (
+          <PrimaryActionButton onClick={handleClick}>
+            {buttonText}
+          </PrimaryActionButton>
+        )}
       </NotesAppContainer>
     );
   }

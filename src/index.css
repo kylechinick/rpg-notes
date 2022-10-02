@@ -3,15 +3,23 @@
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  /* border: 1px solid red; */
   font-family: 'Fira Sans', sans-serif;
+  color: #333;
+  /* border: 1px solid red; */
+}
 
-
+body {
+  background-color: rgb(250, 249, 246);
 }
 
 button {
+  cursor: pointer;
   margin-top: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
   padding: 0.5rem 1rem;
 }
+
+/* h1 {
+  font-size: 3rem;
+} */

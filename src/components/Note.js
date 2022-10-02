@@ -2,22 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const NoteTitle = styled.h1`
-  color: red;
+const NotePreviewContainer = styled.div`
+  margin-bottom: 1rem;
+  &:hover {
+    cursor: pointer;
+  }:
+`;
+
+const NoteTitle = styled.h2`
+  // color: red;
+`;
+
+const NoteSubtitle = styled.h3`
+  // color: red;
+`;
+
+const NoteFinePrint = styled.p`
+  font-weight: 300;
 `;
 
 function Note(props) {
   return (
-    <>
-      <div onClick={() => props.whenNoteClicked(props.id)}>
-        <NoteTitle>{props.name}</NoteTitle>
-        <h2>Entry Type</h2>
-        <p>{props.entryType}</p>
-        <h2>Description</h2>
-        <p>{props.noteText}</p>
-        <p>Note Added: {props.formattedWaitTime} ago</p>
-      </div>
-    </>
+    <NotePreviewContainer onClick={() => props.whenNoteClicked(props.id)}>
+      <NoteTitle>{props.name}</NoteTitle>
+      <NoteSubtitle>Entry Type</NoteSubtitle>
+      <p>{props.entryType}</p>
+      <NoteSubtitle>Description</NoteSubtitle>
+      <p>{props.noteText}</p>
+      <NoteFinePrint>Note Added: {props.formattedWaitTime} ago</NoteFinePrint>
+    </NotePreviewContainer>
   );
 }
 

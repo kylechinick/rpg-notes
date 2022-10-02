@@ -12,7 +12,7 @@ const MainNav = styled.header`
 
 const AppWordMark = styled.p`
   font-family: 'Caudex', serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
 `;
 
