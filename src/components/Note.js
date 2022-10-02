@@ -6,7 +6,11 @@ const NotePreviewContainer = styled.div`
   margin-bottom: 1rem;
   &:hover {
     cursor: pointer;
-  }:
+    opacity: 0.6;
+  }
+  // &.active {
+  //   color: red;
+  // }:
 `;
 
 const NoteTitle = styled.h2`
