@@ -5,7 +5,51 @@ import {
   signInWithEmailAndPassword,
   signOut
 } from 'firebase/auth';
-// import styled from 'styled-components';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+
+const AccountContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  max-width: 800px;
+`;
+
+const NotesListTitle = styled.h1`
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+`;
+
+const AccountForm = styled.form`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+`;
+const AccountInput = styled.input`
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  height: 2.5rem;
+  border-radius: 6px;
+`;
+
+const AccountButton = styled.button`
+  background: none;
+  border: 2px solid #333;
+`;
+
+const SignOutButton = styled.button`
+  // margin-top: 1rem;
+  width: fit-content;
+  font-size: 1.2rem;
+  border: 2px solid rgb(156, 2, 2);
+  color: rgb(156, 2, 2);
+  background: none;
+`;
 
 function SignIn() {
   const [signUpSuccess, setSignUpSuccess] = useState(null);
@@ -53,26 +97,39 @@ function SignIn() {
   }
 
   return (
-    <>
-      <h1>Sign up</h1>
+    <AccountContainer>
+      <NotesListTitle
+        as={motion.h1}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
+        Account
+      </NotesListTitle>
+      <h2>Sign Up</h2>
       {signUpSuccess}
-      <form onSubmit={doSignUp}>
-        <input type='text' name='email' placeholder='Email' />
-        <input type='password' name='password' placeholder='Password' />
-        <button type='submit'>Sign up</button>
-      </form>
-      <h1>Sign In</h1>
+      <AccountForm onSubmit={doSignUp}>
+        <AccountInput type='text' name='email' placeholder='Email' />
+        <AccountInput type='password' name='password' placeholder='Password' />
+        <AccountButton type='submit'>Sign Up</AccountButton>
+      </AccountForm>
+      <h2>Sign In</h2>
       {signInSuccess}
-      <form onSubmit={doSignIn}>
-        <input type='text' name='signinEmail' placeholder='Email' />
-        <input type='password' name='signinPassword' placeholder='Password' />
-        <button type='submit'>Sign in</button>
-      </form>
-      <h1>Sign Out</h1>
+      <AccountForm onSubmit={doSignIn}>
+        <AccountInput type='text' name='signinEmail' placeholder='Email' />
+        <AccountInput
+          type='password'
+          name='signinPassword'
+          placeholder='Password'
+        />
+        <AccountButton type='submit'>Sign In</AccountButton>
+      </AccountForm>
+      <h2>Sign Out</h2>
       {signOutSuccess}
-      <br />
-      <button onClick={doSignOut}>Sign out</button>
-    </>
+      <AccountForm>
+        <SignOutButton onClick={doSignOut}>Sign out</SignOutButton>
+      </AccountForm>
+    </AccountContainer>
   );
 }
 
