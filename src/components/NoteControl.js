@@ -24,7 +24,7 @@ const NotesAppContainer = styled.div`
   margin-left: auto;
   margin-right: auto;
   padding: 1rem;
-  max-width: 80%;
+  max-width: 800px;
 `;
 
 const PrimaryActionButtonContainer = styled.div``;

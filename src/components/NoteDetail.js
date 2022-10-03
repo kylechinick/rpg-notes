@@ -50,8 +50,7 @@ function NoteDetail(props) {
         <UpdateNoteButton
           as={motion.button}
           whileHover={{
-            scale: 1.1,
-            type: 'tween'
+            scale: 1.1
           }}
           onClick={onClickingEdit}
         >
@@ -60,8 +59,7 @@ function NoteDetail(props) {
         <DeleteNoteButton
           as={motion.button}
           whileHover={{
-            scale: 1.1,
-            type: 'tween'
+            scale: 1.1
           }}
           onClick={onClickingEdit}
         >

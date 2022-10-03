@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const NotePreviewContainer = styled.div`
   margin-bottom: 1rem;
+  background: rgb(250, 249, 246);
   &:hover {
     cursor: pointer;
     opacity: 0.6;
@@ -27,7 +29,13 @@ const NoteFinePrint = styled.p`
 
 function Note(props) {
   return (
-    <NotePreviewContainer onClick={() => props.whenNoteClicked(props.id)}>
+    <NotePreviewContainer
+      as={motion.div}
+      initial={{ x: -100, opacity: 0, height: 0 }}
+      animate={{ x: 0, opacity: 1, height: 'auto' }}
+      transition={{ ease: 'easeOut', duration: 1 }}
+      onClick={() => props.whenNoteClicked(props.id)}
+    >
       <NoteTitle>{props.name}</NoteTitle>
       <NoteSubtitle>Entry Type</NoteSubtitle>
       <p>{props.entryType}</p>
