@@ -15,37 +15,58 @@ const ButtonsContainer = styled.div`
   align-items: center;
 `;
 
-const NoteDetailButton = styled.button`
+const UpdateNoteButton = styled.button`
   background: none;
-  outline: 1px solid #333;
-`
+  border: 2px solid #333;
+`;
+const DeleteNoteButton = styled.button`
+  background: none;
+  border: 2px solid rgb(156, 2, 2);
+  color: rgb(156, 2, 2);
+`;
 function NoteDetail(props) {
   const { note, onClickingDelete, onClickingEdit } = props;
   return (
     <>
-      <NoteTitle>Note Detail</NoteTitle>
+      <NoteTitle
+        as={motion.h1}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
+        Note Detail
+      </NoteTitle>
       <h2>{note.name}</h2>
       <h3>Entry Type</h3>
       <p>{note.entryType}</p>
       <h3>Description</h3>
       <p>{note.noteText}</p>
-      <ButtonsContainer>
-        <NoteDetailButton as={motion.button}
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
-          transition={{ ease: 'easeOut', duration: 2 }}
+      <ButtonsContainer
+        as={motion.div}
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
+        <UpdateNoteButton
+          as={motion.button}
+          whileHover={{
+            scale: 1.1,
+            type: 'tween'
+          }}
           onClick={onClickingEdit}
         >
           Update Note
-        </NoteDetailButton>
-        <motion.button
-          initial={{ x: -100 }}
-          animate={{ x: 0 }}
-          transition={{ ease: 'easeOut', duration: 2 }}
-          onClick={() => onClickingDelete(note.id)}
+        </UpdateNoteButton>
+        <DeleteNoteButton
+          as={motion.button}
+          whileHover={{
+            scale: 1.1,
+            type: 'tween'
+          }}
+          onClick={onClickingEdit}
         >
           Delete Note
-        </motion.button>
+        </DeleteNoteButton>
       </ButtonsContainer>
     </>
   );

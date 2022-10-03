@@ -2,6 +2,7 @@ import React from 'react';
 import Note from './Note';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const ListContainer = styled.div`
   //
@@ -16,7 +17,14 @@ const NotesListTitle = styled.h1`
 function NoteList(props) {
   return (
     <ListContainer>
-      <NotesListTitle>All Notes</NotesListTitle>
+      <NotesListTitle
+        as={motion.h1}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
+        All Notes
+      </NotesListTitle>
       {props.noteList.map(note => (
         <Note
           whenNoteClicked={props.onNoteSelection}

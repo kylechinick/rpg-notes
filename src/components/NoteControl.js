@@ -27,9 +27,18 @@ const NotesAppContainer = styled.div`
   max-width: 80%;
 `;
 
-// const PrimaryActionButton = styled.button`
-//   float: right;
-// `;
+const PrimaryActionButtonContainer = styled.div``;
+
+const PrimaryActionButton = styled.button`
+  margin-top: 2rem;
+  width: fit-content;
+  align-self: flex-start;
+  background-color: rgb(44, 44, 225);
+  border: 2px solid rgb(250, 249, 246);
+  color: rgb(250, 249, 246);
+  // padding: 0.5rem 3rem;
+  font-size: 1.2rem;
+`;
 
 function NoteControl() {
   const [formVisibleOnPage, setFormVisibleOnPage] = useState(false);
@@ -146,7 +155,7 @@ function NoteControl() {
           onEditNote={handleEditingNoteInList}
         />
       );
-      buttonText = 'Return to Note List';
+      buttonText = 'View All Notes';
     } else if (selectedNote != null) {
       currentlyVisibleState = (
         <NoteDetail
@@ -155,12 +164,12 @@ function NoteControl() {
           onClickingEdit={handleEditClick}
         />
       );
-      buttonText = 'Return to Note List';
+      buttonText = 'View All Notes';
     } else if (formVisibleOnPage) {
       currentlyVisibleState = (
         <NewNoteForm onNewNoteCreation={handleAddingNewNoteToList} />
       );
-      buttonText = 'Return to Note List';
+      buttonText = 'View All Notes';
     } else {
       currentlyVisibleState = (
         <NoteList
@@ -174,16 +183,17 @@ function NoteControl() {
       <NotesAppContainer>
         {currentlyVisibleState}
         {error ? null : (
-          <motion.button
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ ease: 'easeOut', duration: 2 }}
-            opacity
-            onClick={handleClick}
-            className='primaryActionButton'
-          >
-            {buttonText}
-          </motion.button>
+          <PrimaryActionButtonContainer>
+            <PrimaryActionButton
+              as={motion.button}
+              initial={{ x: -100, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ ease: 'easeOut', duration: 1 }}
+              onClick={handleClick}
+            >
+              {buttonText}
+            </PrimaryActionButton>
+          </PrimaryActionButtonContainer>
         )}
       </NotesAppContainer>
     );
