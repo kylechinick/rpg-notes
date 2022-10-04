@@ -46,6 +46,7 @@ function NoteControl() {
   const [selectedNote, setSelectedNote] = useState(null);
   const [editing, setEditing] = useState(false);
   const [error, setError] = useState(null);
+  const [currencyConverterOnPage, setcurrencyConverterOnPage] = useState(false);
 
   useEffect(() => {
     function updateNoteElapsedWaitTime() {

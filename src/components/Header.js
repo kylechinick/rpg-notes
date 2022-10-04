@@ -37,6 +37,9 @@ function Header() {
           <Link to='/'>Home</Link>
         </NavLink>
         <NavLink>
+          <Link to='/currency-converter'>Currency Converter</Link>
+        </NavLink>
+        <NavLink>
           <Link to='/sign-in'>Account</Link>
         </NavLink>
       </NavLinksList>
