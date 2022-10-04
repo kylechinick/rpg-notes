@@ -30,13 +30,9 @@ function ReusableForm(props) {
     <>
       <NoteForm onSubmit={props.formSubmissionHandler}>
         <EntryTypeOptionsContainer>
-          <EntryTypeOption type='radio' name='entry-type' id='new-character' />{' '}
+          <EntryTypeOption type='radio' name='entry-type' id='new-character' />
           New Character
-          <EntryTypeOption
-            type='radio'
-            name='entry-type'
-            id='found-loot'
-          />{' '}
+          <EntryTypeOption type='radio' name='entry-type' id='found-loot' />
           Fount Loot
         </EntryTypeOptionsContainer>
         <NoteTextInput type='text' name='name' placeholder='Note name' />
