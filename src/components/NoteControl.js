@@ -33,7 +33,7 @@ const PrimaryActionButton = styled.button`
   margin-top: 2rem;
   width: fit-content;
   align-self: flex-start;
-  background-color: rgb(44, 44, 225);
+  background-color: rgb(92, 156, 245);
   border: 2px solid rgb(250, 249, 246);
   color: rgb(250, 249, 246);
   // padding: 0.5rem 3rem;
