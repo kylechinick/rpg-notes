@@ -10,31 +10,33 @@ const NoteForm = styled.form`
 
 const NoteTextInput = styled.input`
   margin-bottom: 1rem;
+  padding: 0.5rem;
 `;
 
 const NoteTextAreaInput = styled.textarea`
   margin-bottom: 1rem;
+  padding: 0.5rem;
 `;
 
 const SubmitNoteButton = styled.button`
   margin-bottom: 1rem;
 `;
 
-const EntryTypeOptionsContainer = styled.div``;
-const EntryTypeOption = styled.input`
-  margin: 1rem;
-`;
+// const EntryTypeOptionsContainer = styled.div``;
+// const EntryTypeOption = styled.input`
+//   margin: 1rem;
+// `;
 
 function ReusableForm(props) {
   return (
     <>
       <NoteForm onSubmit={props.formSubmissionHandler}>
-        <EntryTypeOptionsContainer>
+        {/* <EntryTypeOptionsContainer>
           <EntryTypeOption type='radio' name='entry-type' id='new-character' />
           New Character
           <EntryTypeOption type='radio' name='entry-type' id='found-loot' />
           Fount Loot
-        </EntryTypeOptionsContainer>
+        </EntryTypeOptionsContainer> */}
         <NoteTextInput type='text' name='name' placeholder='Note name' />
         <NoteTextInput type='text' name='entryType' placeholder='Entry type' />
         <NoteTextAreaInput
