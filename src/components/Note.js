@@ -39,6 +39,8 @@ function Note(props) {
       <NoteTitle>{props.name}</NoteTitle>
       <NoteSubtitle>Entry Type</NoteSubtitle>
       <p>{props.entryType}</p>
+      <NoteSubtitle>Character Name</NoteSubtitle>
+      <p>{props.charName}</p>
       <NoteSubtitle>Description</NoteSubtitle>
       <p>{props.noteText}</p>
       <NoteFinePrint>Note Added: {props.formattedWaitTime} ago</NoteFinePrint>
@@ -49,6 +51,7 @@ function Note(props) {
 Note.propTypes = {
   name: PropTypes.string,
   entryType: PropTypes.string,
+  charName: PropTypes.string,
   noteText: PropTypes.string,
   formattedWaitTime: PropTypes.string,
   id: PropTypes.string,

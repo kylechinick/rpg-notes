@@ -83,6 +83,7 @@ function NoteControl() {
           notes.push({
             name: doc.data().name,
             entryType: doc.data().entryType,
+            charName: doc.data().charName,
             noteText: doc.data().noteText,
             timeOpen: jsDate,
             formattedWaitTime: formatDistanceToNow(jsDate),

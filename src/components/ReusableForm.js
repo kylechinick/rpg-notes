@@ -39,6 +39,7 @@ function ReusableForm(props) {
         </EntryTypeOptionsContainer> */}
         <NoteTextInput type='text' name='name' placeholder='Note name' />
         <NoteTextInput type='text' name='entryType' placeholder='Entry type' />
+        <NoteTextInput type='text' name='charName' placeholder='Character Name' />
         <NoteTextAreaInput
           name='noteText'
           placeholder='We encountered a dragon that is not a fan of dungeons... '

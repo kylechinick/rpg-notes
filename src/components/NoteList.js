@@ -30,6 +30,7 @@ function NoteList(props) {
           whenNoteClicked={props.onNoteSelection}
           name={note.name}
           entryType={note.entryType}
+          charName={note.charName}
           formattedWaitTime={note.formattedWaitTime}
           noteText={note.noteText}
           id={note.id}

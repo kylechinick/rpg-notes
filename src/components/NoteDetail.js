@@ -39,6 +39,8 @@ function NoteDetail(props) {
       <h2>{note.name}</h2>
       <h3>Entry Type</h3>
       <p>{note.entryType}</p>
+      <h3>Character Name</h3>
+      <p>{note.charName}</p>
       <h3>Description</h3>
       <p>{note.noteText}</p>
       <ButtonsContainer

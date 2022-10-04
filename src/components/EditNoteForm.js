@@ -13,6 +13,7 @@ function EditNoteForm(props) {
     props.onEditNote({
       name: event.target.name.value,
       entryType: event.target.entryType.value,
+      charName: event.target.charName.value,
       noteText: event.target.noteText.value,
       id: note.id
     });

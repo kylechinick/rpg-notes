@@ -9,6 +9,7 @@ function NewNoteForm(props) {
     props.onNewNoteCreation({
       name: event.target.name.value,
       entryType: event.target.entryType.value,
+      charName: event.target.charName.value,
       noteText: event.target.noteText.value,
       timeOpen: serverTimestamp()
     });
