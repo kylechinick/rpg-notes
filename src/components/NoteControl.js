@@ -84,6 +84,7 @@ function NoteControl() {
             name: doc.data().name,
             entryType: doc.data().entryType,
             charName: doc.data().charName,
+            supportingImage: doc.data().supportingImage,
             noteText: doc.data().noteText,
             timeOpen: jsDate,
             formattedWaitTime: formatDistanceToNow(jsDate),

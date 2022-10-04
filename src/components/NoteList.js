@@ -31,6 +31,7 @@ function NoteList(props) {
           name={note.name}
           entryType={note.entryType}
           charName={note.charName}
+          supportingImage={note.supportingImage}
           formattedWaitTime={note.formattedWaitTime}
           noteText={note.noteText}
           id={note.id}

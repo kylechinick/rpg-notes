@@ -41,6 +41,8 @@ function NoteDetail(props) {
       <p>{note.entryType}</p>
       <h3>Character Name</h3>
       <p>{note.charName}</p>
+      <h3>Supporting Image</h3>
+      <p>{note.supportingImage}</p>
       <h3>Description</h3>
       <p>{note.noteText}</p>
       <ButtonsContainer
