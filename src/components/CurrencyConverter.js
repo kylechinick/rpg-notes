@@ -4,8 +4,8 @@ function CurrencyConverter() {
   function handleCurrencyConverterSubmission(event) {
     event.preventDefault();
 
-    const currencyType = document.querySelector('#currency-type');
-    const currencyAmount = document.querySelector('#currency-amount');
+    const currencyType = document.querySelector('#currency-type').value;
+    const currencyAmount = document.querySelector('#currency-amount').value;
 
     if (currencyType) {
       console.log(currencyAmount / 2);
