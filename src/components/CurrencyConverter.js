@@ -11,7 +11,7 @@ const ConversionContainer = styled.div`
 const ConversionForm = styled.form`
   display: flex;
   flex-direction: column;
-
+  width: 200px;
   margin-top: 1rem;
 `;
 
