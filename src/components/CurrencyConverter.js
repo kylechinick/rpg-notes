@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const ConversionContainer = styled.div`
@@ -21,56 +21,31 @@ const CurrencyInput = styled.input`
 `;
 
 function CurrencyConverter() {
-  // const [currentCurrencyValue, setcurrentCurrencyValue] = useState(null);
+  const [currentCurrencyValue, setcurrentCurrencyValue] = useState(0);
 
   function handleCurrencyConverterSubmission(event) {
     event.preventDefault();
-
-    let convertedCurrencyOutput = document.querySelector(
-      '#currencyAmountOutput'
-    );
 
     const currencyType = event.target.currencyType.value;
     const currencyAmount = event.target.currencyAmount.value;
 
     switch (currencyType) {
       case 'copper':
-        console.log(
-          `Your total amount of ${currencyType} is worth ${
-            currencyAmount / 100
-          } in gold.`
-        );
-        convertedCurrencyOutput.text = currencyAmount;
+        setcurrentCurrencyValue(currencyAmount / 100);
         break;
       case 'silver':
-        console.log(
-          `Your total amount of ${currencyType} is worth ${
-            currencyAmount / 10
-          } in gold.`
-        );
+        setcurrentCurrencyValue(currencyAmount / 10);
+        console.log(currencyAmount);
         break;
       case 'electrum':
-        console.log(
-          `Your total amount of ${currencyType} is worth ${
-            currencyAmount / 2
-          } in gold.`
-        );
+        setcurrentCurrencyValue(currencyAmount / 2);
         break;
       case 'gold':
-        console.log(
-          `Your total amount of ${currencyType} is worth ${
-            currencyAmount / 1
-          } in gold.`
-        );
+        setcurrentCurrencyValue(currencyAmount / 1);
         break;
       case 'platinum':
-        console.log(
-          `Your total amount of ${currencyType} is worth ${
-            currencyAmount * 10
-          } in gold.`
-        );
+        setcurrentCurrencyValue(currencyAmount * 10);
         break;
-
       default:
         break;
     }
@@ -96,11 +71,11 @@ function CurrencyConverter() {
       </ConversionForm>
       <div>
         <p>Converted Silver</p>
-        <p id='currencyAmountOutput'>0</p>
+        <p>{currentCurrencyValue}</p>
       </div>
       <div>
         <p>Converted Grand Total</p>
-        <p id='convertedGrandTotal'>0</p>
+        <p>0</p>
       </div>
     </ConversionContainer>
   );
