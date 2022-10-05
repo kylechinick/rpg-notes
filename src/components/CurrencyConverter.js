@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const ExplainerLockup = styled.div`
   width: 100%;
-  border 2px solid blue;
+  // border 2px solid blue;
 `;
 
 const CurrencyConverterContainer = styled.div`
@@ -12,7 +12,7 @@ const CurrencyConverterContainer = styled.div`
   // flex-direction: column;
   // width: 80%;
   padding: 1rem;
-  border: 2px solid green;
+  // border: 2px solid green;
 `;
 
 const CurrencyColumn = styled.div`
@@ -20,7 +20,11 @@ const CurrencyColumn = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 0.5rem;
+  padding: 1rem;
+  background: rgb(226, 219, 199);
+  border-radius: 6px;
 `;
+
 const ConversionForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -32,9 +36,28 @@ const ConversionForm = styled.form`
 const CurrencyInput = styled.input`
   margin-bottom: 1rem;
   padding: 0.5rem;
+  height: 2.5rem;
+  border: 2px solid #333;
+  border-radius: 6px;
+`;
+
+const CurrencyColumnButton = styled.button`
+  margin-left: 1rem;
+  background: none;
+  border: 2px solid #333;
+`;
+
+const CurrencyColumnOutput = styled.p`
+  // border: 2px solid #333;
+  // color: rgb(226, 219, 199);
+  font-size: 1.4rem;
 `;
 
 const TotalsLockup = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
   width: 100%;
 `;
 
@@ -77,50 +100,53 @@ function CurrencyConverter() {
         <p>Convert a currency type to its value in gold</p>
       </ExplainerLockup>
       <CurrencyColumn>
+        <p>Copper</p>
         <ConversionForm onSubmit={handleCurrencyConverterSubmission}>
-          <CurrencyInput
+          {/* <CurrencyInput
             type='text'
             placeholder='Currency Type'
             name='currencyType'
-          />
+          /> */}
           <CurrencyInput
             type='number'
             placeholder='Currency Amount'
             name='currencyAmount'
             id='currencyAmount'
           />
-          <button>Convert</button>
+          <CurrencyColumnButton>Convert</CurrencyColumnButton>
         </ConversionForm>
+        <CurrencyColumnOutput>= {0} Gold</CurrencyColumnOutput>
       </CurrencyColumn>
 
       <CurrencyColumn>
+        <p>Silver</p>
         {/* <ConversionForm onSubmit={handleSilverConversionSubmission}> */}
         <ConversionForm>
-          <CurrencyInput
+          {/* <CurrencyInput
             type='text'
             placeholder='Currency Type'
             name='currencyType'
-          />
+          /> */}
           <CurrencyInput
             type='number'
             placeholder='Currency Amount'
             name='currencyAmount'
             id='currencyAmount'
           />
-          <button>Convert</button>
+          <CurrencyColumnButton>Convert</CurrencyColumnButton>
         </ConversionForm>
-        <p>= {0} Gold</p>
+        <CurrencyColumnOutput>= {0} Gold</CurrencyColumnOutput>
       </CurrencyColumn>
 
       <TotalsLockup>
-        <div>
+        {/* <div>
           <p>Converted Silver</p>
           <p>{currentCurrencyValue}</p>
-        </div>
-        <div>
-          <p>Converted Grand Total</p>
-          <p>0</p>
-        </div>
+        </div> */}
+        {/* <div> */}
+        <p>Converted Grand Total</p>
+        <p>0</p>
+        {/* </div> */}
       </TotalsLockup>
     </CurrencyConverterContainer>
   );

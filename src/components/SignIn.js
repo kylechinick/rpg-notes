@@ -34,6 +34,7 @@ const AccountInput = styled.input`
   margin-bottom: 1rem;
   padding: 0.5rem;
   height: 2.5rem;
+  border: 2px solid #333;
   border-radius: 6px;
 `;
 
