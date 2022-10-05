@@ -1,13 +1,17 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const ConversionContainer = styled.div`
+const CurrencyConverterContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
   padding: 1rem;
 `;
 
+const currencyColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 const ConversionForm = styled.form`
   display: flex;
   flex-direction: column;
@@ -52,9 +56,10 @@ function CurrencyConverter() {
   }
 
   return (
-    <ConversionContainer>
+    <CurrencyConverterContainer>
       <h1>Currency Converter</h1>
       <p>Convert a currency type to its value in gold</p>
+
       <ConversionForm onSubmit={handleCurrencyConverterSubmission}>
         <CurrencyInput
           type='text'
@@ -69,6 +74,24 @@ function CurrencyConverter() {
         />
         <button>Convert</button>
       </ConversionForm>
+
+      <currencyColumn>
+        <ConversionForm onSubmit={handleSilverConversionSubmission}>
+          <CurrencyInput
+            type='text'
+            placeholder='Currency Type'
+            name='currencyType'
+          />
+          <CurrencyInput
+            type='number'
+            placeholder='Currency Amount'
+            name='currencyAmount'
+            id='currencyAmount'
+          />
+          <button>Convert</button>
+        </ConversionForm>
+      </currencyColumn>
+
       <div>
         <p>Converted Silver</p>
         <p>{currentCurrencyValue}</p>
@@ -77,7 +100,7 @@ function CurrencyConverter() {
         <p>Converted Grand Total</p>
         <p>0</p>
       </div>
-    </ConversionContainer>
+    </CurrencyConverterContainer>
   );
 }
 
