@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 
 function CurrencyConverter() {
+  // const [currentCurrencyValue, setcurrentCurrencyValue] = useState(null);
+
   function handleCurrencyConverterSubmission(event) {
     event.preventDefault();
 
@@ -10,6 +12,7 @@ function CurrencyConverter() {
 
     switch (currencyType) {
       case 'copper':
+
         console.log(
           `Your total amount of ${currencyType} is worth ${
             currencyAmount / 100
