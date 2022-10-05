@@ -8,22 +8,46 @@ function CurrencyConverter() {
     const currencyType = event.target.currencyType.value;
     const currencyAmount = event.target.currencyAmount.value;
 
-    if (currencyType) {
-      console.log(
-        `Your total amount of ${currencyType} is worth ${
-          currencyAmount / 2
-        } in gold.`
-      );
+    switch (currencyType) {
+      case 'copper':
+        console.log(
+          `Your total amount of ${currencyType} is worth ${
+            currencyAmount / 100
+          } in gold.`
+        );
+        break;
+      case 'silver':
+        console.log(
+          `Your total amount of ${currencyType} is worth ${
+            currencyAmount / 10
+          } in gold.`
+        );
+        break;
+      case 'electrum':
+        console.log(
+          `Your total amount of ${currencyType} is worth ${
+            currencyAmount / 2
+          } in gold.`
+        );
+        break;
+      case 'gold':
+        console.log(
+          `Your total amount of ${currencyType} is worth ${
+            currencyAmount / 1
+          } in gold.`
+        );
+        break;
+      case 'platinum':
+        console.log(
+          `Your total amount of ${currencyType} is worth ${
+            currencyAmount * 10
+          } in gold.`
+        );
+        break;
+
+      default:
+        break;
     }
-
-    // switch (currency-type) {
-    //   case 'silver':
-
-    //     break;
-
-    //   default:
-    //     break;
-    // }
   }
 
   return (
@@ -39,6 +63,14 @@ function CurrencyConverter() {
         />
         <button>Convert</button>
       </form>
+      <div>
+        <p>Converted Silver</p>
+        <p id='convertedSilver'>0</p>
+      </div>
+      <div>
+        <p>Converted Grand Total</p>
+        <p id='convertedGrandTotal'>0</p>
+      </div>
     </React.Fragment>
   );
 }
