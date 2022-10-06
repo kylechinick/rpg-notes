@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 const MainNav = styled.header`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 100%;
@@ -18,8 +19,9 @@ const AppWordMark = styled.p`
 
 const NavLinksList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: end;
   list-style: none;
 `;
 
