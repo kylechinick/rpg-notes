@@ -64,6 +64,7 @@ const TotalsLockup = styled.div`
 function CurrencyConverter() {
   const [currentCurrencyValue, setcurrentCurrencyValue] = useState(0);
   const [currentCopperValue, setcurrentCopperValue] = useState(0);
+  const [currentSilverValue, setcurrentSilverValue] = useState(0);
 
   // function handleCurrencyConverterSubmission(event) {
   //   event.preventDefault();
@@ -95,9 +96,14 @@ function CurrencyConverter() {
 
   function handleCopperConverterSubmission(event) {
     event.preventDefault();
-
     const currencyAmount = event.target.currencyAmount.value;
     setcurrentCopperValue(currencyAmount / 100);
+  }
+
+  function handleSilverConverterSubmission(event) {
+    event.preventDefault();
+    const currencyAmount = event.target.currencyAmount.value;
+    setcurrentSilverValue(currencyAmount / 10);
   }
 
   return (
@@ -109,11 +115,6 @@ function CurrencyConverter() {
       <CurrencyColumn>
         <p>Copper</p>
         <ConversionForm onSubmit={handleCopperConverterSubmission}>
-          {/* <CurrencyInput
-            type='text'
-            placeholder='Currency Type'
-            name='currencyType'
-          /> */}
           <CurrencyInput
             type='number'
             placeholder='Currency Amount'
@@ -122,18 +123,12 @@ function CurrencyConverter() {
           />
           <CurrencyColumnButton>Convert</CurrencyColumnButton>
         </ConversionForm>
-        <CurrencyColumnOutput>= {0} Gold</CurrencyColumnOutput>
+        <CurrencyColumnOutput>= {currentCopperValue} Gold</CurrencyColumnOutput>
       </CurrencyColumn>
 
       <CurrencyColumn>
         <p>Silver</p>
-        {/* <ConversionForm onSubmit={handleSilverConversionSubmission}> */}
-        <ConversionForm>
-          {/* <CurrencyInput
-            type='text'
-            placeholder='Currency Type'
-            name='currencyType'
-          /> */}
+        <ConversionForm onSubmit={handleSilverConverterSubmission}>
           <CurrencyInput
             type='number'
             placeholder='Currency Amount'
@@ -142,18 +137,12 @@ function CurrencyConverter() {
           />
           <CurrencyColumnButton>Convert</CurrencyColumnButton>
         </ConversionForm>
-        <CurrencyColumnOutput>= {0} Gold</CurrencyColumnOutput>
+        <CurrencyColumnOutput>= {currentSilverValue} Gold</CurrencyColumnOutput>
       </CurrencyColumn>
 
       <TotalsLockup>
-        {/* <div>
-          <p>Converted Silver</p>
-          <p>{currentCurrencyValue}</p>
-        </div> */}
-        {/* <div> */}
         <p>Converted Grand Total</p>
         <p>0</p>
-        {/* </div> */}
       </TotalsLockup>
     </CurrencyConverterContainer>
   );
