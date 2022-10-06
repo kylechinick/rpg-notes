@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const ExplainerLockup = styled.div`
   width: 100%;
@@ -133,11 +134,21 @@ function CurrencyConverter() {
 
   return (
     <CurrencyConverterContainer>
-      <ExplainerLockup>
+      <ExplainerLockup
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
         <h1>Currency Converter</h1>
         <p>Convert a currency type to its value in gold</p>
       </ExplainerLockup>
-      <CurrencyCard>
+      <CurrencyCard
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
         <CurrencyCardTitle>Copper</CurrencyCardTitle>
         <ConversionForm onSubmit={handleCopperConverterSubmission}>
           <CurrencyInput
@@ -149,7 +160,12 @@ function CurrencyConverter() {
         </ConversionForm>
         <CurrencyCardOutput>= {currentCopperValue} Gold</CurrencyCardOutput>
       </CurrencyCard>
-      <CurrencyCard>
+      <CurrencyCard
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
         <CurrencyCardTitle>Silver</CurrencyCardTitle>
         <ConversionForm onSubmit={handleSilverConverterSubmission}>
           <CurrencyInput
@@ -162,7 +178,12 @@ function CurrencyConverter() {
         </ConversionForm>
         <CurrencyCardOutput>= {currentSilverValue} Gold</CurrencyCardOutput>
       </CurrencyCard>
-      <CurrencyCard>
+      <CurrencyCard
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
         <CurrencyCardTitle>Electrum</CurrencyCardTitle>
         <ConversionForm onSubmit={handleElectrumConverterSubmission}>
           <CurrencyInput
@@ -175,7 +196,12 @@ function CurrencyConverter() {
         </ConversionForm>
         <CurrencyCardOutput>= {currentElectrumValue} Gold</CurrencyCardOutput>
       </CurrencyCard>
-      <CurrencyCard>
+      <CurrencyCard
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
         <CurrencyCardTitle>Gold</CurrencyCardTitle>
         <ConversionForm onSubmit={handleGoldConverterSubmission}>
           <CurrencyInput
@@ -188,7 +214,12 @@ function CurrencyConverter() {
         </ConversionForm>
         <CurrencyCardOutput>= {currentGoldValue} Gold</CurrencyCardOutput>
       </CurrencyCard>
-      <CurrencyCard>
+      <CurrencyCard
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+      >
         <CurrencyCardTitle>Platinum</CurrencyCardTitle>
         <ConversionForm onSubmit={handlePlatinumConverterSubmission}>
           <CurrencyInput
@@ -201,7 +232,12 @@ function CurrencyConverter() {
         </ConversionForm>
         <CurrencyCardOutput>= {currentPlatinumValue} Gold</CurrencyCardOutput>
       </CurrencyCard>
-      <TotalsLockup>
+      <TotalsLockup
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: 'easeIn', duration: 1.4 }}
+      >
         <TotalsLockupTitle>Converted Grand Total</TotalsLockupTitle>
         <TotalsLockupOutput>{currentCurrencyTotal} Gold</TotalsLockupOutput>
         <TotalsLockupButton onClick={handleCurrencyConverterTotal}>
