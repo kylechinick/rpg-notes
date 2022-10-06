@@ -65,32 +65,39 @@ function CurrencyConverter() {
   const [currentCurrencyValue, setcurrentCurrencyValue] = useState(0);
   const [currentCopperValue, setcurrentCopperValue] = useState(0);
 
-  function handleCurrencyConverterSubmission(event) {
+  // function handleCurrencyConverterSubmission(event) {
+  //   event.preventDefault();
+
+  //   const currencyType = event.target.currencyType.value;
+  //   const currencyAmount = event.target.currencyAmount.value;
+
+  //   switch (currencyType) {
+  //     case 'copper':
+  //       setcurrentCurrencyValue(currencyAmount / 100);
+  //       break;
+  //     case 'silver':
+  //       setcurrentCurrencyValue(currencyAmount / 10);
+  //       console.log(currencyAmount);
+  //       break;
+  //     case 'electrum':
+  //       setcurrentCurrencyValue(currencyAmount / 2);
+  //       break;
+  //     case 'gold':
+  //       setcurrentCurrencyValue(currencyAmount / 1);
+  //       break;
+  //     case 'platinum':
+  //       setcurrentCurrencyValue(currencyAmount * 10);
+  //       break;
+  //     default:
+  //       break;
+  //   }
+  // }
+
+  function handleCopperConverterSubmission(event) {
     event.preventDefault();
 
-    const currencyType = event.target.currencyType.value;
     const currencyAmount = event.target.currencyAmount.value;
-
-    switch (currencyType) {
-      case 'copper':
-        setcurrentCurrencyValue(currencyAmount / 100);
-        break;
-      case 'silver':
-        setcurrentCurrencyValue(currencyAmount / 10);
-        console.log(currencyAmount);
-        break;
-      case 'electrum':
-        setcurrentCurrencyValue(currencyAmount / 2);
-        break;
-      case 'gold':
-        setcurrentCurrencyValue(currencyAmount / 1);
-        break;
-      case 'platinum':
-        setcurrentCurrencyValue(currencyAmount * 10);
-        break;
-      default:
-        break;
-    }
+    setcurrentCopperValue(currencyAmount / 100);
   }
 
   return (
@@ -101,7 +108,7 @@ function CurrencyConverter() {
       </ExplainerLockup>
       <CurrencyColumn>
         <p>Copper</p>
-        <ConversionForm onSubmit={handleCurrencyConverterSubmission}>
+        <ConversionForm onSubmit={handleCopperConverterSubmission}>
           {/* <CurrencyInput
             type='text'
             placeholder='Currency Type'
