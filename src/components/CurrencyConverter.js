@@ -62,48 +62,52 @@ const TotalsLockup = styled.div`
 `;
 
 function CurrencyConverter() {
-  const [currentCurrencyValue, setcurrentCurrencyValue] = useState(0);
+  const [currentCurrencyTotal, setcurrentCurrencyTotal] = useState(0);
   const [currentCopperValue, setcurrentCopperValue] = useState(0);
   const [currentSilverValue, setcurrentSilverValue] = useState(0);
+  const [currentElectrumValue, setcurrentElectrumValue] = useState(0);
+  const [currentGoldValue, setcurrentGoldValue] = useState(0);
+  const [currentPlatinumValue, setcurrentPlatinumValue] = useState(0);
 
-  // function handleCurrencyConverterSubmission(event) {
-  //   event.preventDefault();
-
-  //   const currencyType = event.target.currencyType.value;
-  //   const currencyAmount = event.target.currencyAmount.value;
-
-  //   switch (currencyType) {
-  //     case 'copper':
-  //       setcurrentCurrencyValue(currencyAmount / 100);
-  //       break;
-  //     case 'silver':
-  //       setcurrentCurrencyValue(currencyAmount / 10);
-  //       console.log(currencyAmount);
-  //       break;
-  //     case 'electrum':
-  //       setcurrentCurrencyValue(currencyAmount / 2);
-  //       break;
-  //     case 'gold':
-  //       setcurrentCurrencyValue(currencyAmount / 1);
-  //       break;
-  //     case 'platinum':
-  //       setcurrentCurrencyValue(currencyAmount * 10);
-  //       break;
-  //     default:
-  //       break;
-  //   }
-  // }
+  function handleCurrencyConverterTotal(event) {
+    setcurrentCurrencyTotal(
+      currentCurrencyTotal +
+        currentCopperValue +
+        currentSilverValue +
+        currentElectrumValue +
+        currentGoldValue +
+        currentPlatinumValue
+    );
+  }
 
   function handleCopperConverterSubmission(event) {
     event.preventDefault();
-    const currencyAmount = event.target.currencyAmount.value;
+    const currencyAmount = parseInt(event.target.currencyAmount.value);
     setcurrentCopperValue(currencyAmount / 100);
   }
 
   function handleSilverConverterSubmission(event) {
     event.preventDefault();
-    const currencyAmount = event.target.currencyAmount.value;
+    const currencyAmount = parseInt(event.target.currencyAmount.value);
     setcurrentSilverValue(currencyAmount / 10);
+  }
+
+  function handleElectrumConverterSubmission(event) {
+    event.preventDefault();
+    const currencyAmount = parseInt(event.target.currencyAmount.value);
+    setcurrentElectrumValue(currencyAmount / 2);
+  }
+
+  function handleGoldConverterSubmission(event) {
+    event.preventDefault();
+    const currencyAmount = parseInt(event.target.currencyAmount.value);
+    setcurrentGoldValue(currencyAmount / 1);
+  }
+
+  function handlePlatinumConverterSubmission(event) {
+    event.preventDefault();
+    const currencyAmount = parseInt(event.target.currencyAmount.value);
+    setcurrentPlatinumValue(currencyAmount * 10);
   }
 
   return (
@@ -119,13 +123,11 @@ function CurrencyConverter() {
             type='number'
             placeholder='Currency Amount'
             name='currencyAmount'
-            id='currencyAmount'
           />
           <CurrencyColumnButton>Convert</CurrencyColumnButton>
         </ConversionForm>
         <CurrencyColumnOutput>= {currentCopperValue} Gold</CurrencyColumnOutput>
       </CurrencyColumn>
-
       <CurrencyColumn>
         <p>Silver</p>
         <ConversionForm onSubmit={handleSilverConverterSubmission}>
@@ -139,10 +141,53 @@ function CurrencyConverter() {
         </ConversionForm>
         <CurrencyColumnOutput>= {currentSilverValue} Gold</CurrencyColumnOutput>
       </CurrencyColumn>
-
+      <CurrencyColumn>
+        <p>Electrum</p>
+        <ConversionForm onSubmit={handleElectrumConverterSubmission}>
+          <CurrencyInput
+            type='number'
+            placeholder='Currency Amount'
+            name='currencyAmount'
+            id='currencyAmount'
+          />
+          <CurrencyColumnButton>Convert</CurrencyColumnButton>
+        </ConversionForm>
+        <CurrencyColumnOutput>
+          = {currentElectrumValue} Gold
+        </CurrencyColumnOutput>
+      </CurrencyColumn>
+      <CurrencyColumn>
+        <p>Gold</p>
+        <ConversionForm onSubmit={handleGoldConverterSubmission}>
+          <CurrencyInput
+            type='number'
+            placeholder='Currency Amount'
+            name='currencyAmount'
+            id='currencyAmount'
+          />
+          <CurrencyColumnButton>Convert</CurrencyColumnButton>
+        </ConversionForm>
+        <CurrencyColumnOutput>= {currentGoldValue} Gold</CurrencyColumnOutput>
+      </CurrencyColumn>
+      <CurrencyColumn>
+        <p>Platinum</p>
+        <ConversionForm onSubmit={handlePlatinumConverterSubmission}>
+          <CurrencyInput
+            type='number'
+            placeholder='Currency Amount'
+            name='currencyAmount'
+            id='currencyAmount'
+          />
+          <CurrencyColumnButton>Convert</CurrencyColumnButton>
+        </ConversionForm>
+        <CurrencyColumnOutput>
+          = {currentPlatinumValue} Gold
+        </CurrencyColumnOutput>
+      </CurrencyColumn>
       <TotalsLockup>
         <p>Converted Grand Total</p>
-        <p>0</p>
+        <p id='grandTotalOutput'>{currentCurrencyTotal} Gold</p>
+        <button onClick={handleCurrencyConverterTotal}>Calculate Total</button>
       </TotalsLockup>
     </CurrencyConverterContainer>
   );
