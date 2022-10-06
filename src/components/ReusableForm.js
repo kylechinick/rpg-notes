@@ -40,7 +40,7 @@ function ReusableForm(props) {
         <NoteTextInput type='text' name='name' placeholder='Note name' />
         <NoteTextInput type='text' name='entryType' placeholder='Entry type' />
         <NoteTextInput type='text' name='charName' placeholder='Character Name' />
-        <NoteTextInput type='file' name='supportingImage' placeholder='Image Uploader' />
+        {/* <NoteTextInput type='file' name='supportingImage' placeholder='Image Uploader' /> */}
         <NoteTextAreaInput
           name='noteText'
           placeholder='We encountered a dragon that is not a fan of dungeons... '

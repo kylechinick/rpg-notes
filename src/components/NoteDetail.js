@@ -41,8 +41,8 @@ function NoteDetail(props) {
       <p>{note.entryType}</p>
       <h3>Character Name</h3>
       <p>{note.charName}</p>
-      <h3>Supporting Image</h3>
-      <p>{note.supportingImage}</p>
+      {/* <h3>Supporting Image</h3>
+      <p>{note.supportingImage}</p> */}
       <h3>Description</h3>
       <p>{note.noteText}</p>
       <ButtonsContainer
@@ -60,13 +60,7 @@ function NoteDetail(props) {
         >
           Update Note
         </UpdateNoteButton>
-        <DeleteNoteButton
-          as={motion.button}
-          whileHover={{
-            scale: 1.1
-          }}
-          onClick={onClickingEdit}
-        >
+        <DeleteNoteButton onClick={() => onClickingDelete(note.id)}>
           Delete Note
         </DeleteNoteButton>
       </ButtonsContainer>

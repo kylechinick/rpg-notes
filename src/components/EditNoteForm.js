@@ -14,7 +14,7 @@ function EditNoteForm(props) {
       name: event.target.name.value,
       entryType: event.target.entryType.value,
       charName: event.target.charName.value,
-      supportingImage: event.target.supportingImage.value,
+      // supportingImage: event.target.supportingImage.value,
       noteText: event.target.noteText.value,
       id: note.id
     });
