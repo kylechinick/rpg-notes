@@ -26,7 +26,7 @@ const NavLinksList = styled.ul`
 `;
 
 const NavLink = styled.li`
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   // margin-right: 0.5rem;
 `;
 
