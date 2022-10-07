@@ -1,10 +1,10 @@
 # RPG Notes: The Tattered Tome
 
-AuthorBy _**Kyle Chinick**_
+Authored By _**Kyle Chinick**_
 
 ## Summary
 
-The goal of this app is to provide users an easier way to log the events, new characters and information encountered while playing a tabletop RPG.
+The Tattered Tome app provide users an easier way to log the events, new characters and information encountered while playing a tabletop RPG.
 
 ## Description
 
@@ -20,50 +20,35 @@ _Please note that the following block-quoted paragraphs describe app functionali
 >
 > Quick-select entry-types account for common events and types of information that are typically encountered in a tabletop RPG. Having immediate access to a pre-formatted note – which prompts the user for basic information relevant to the given entry type - minimizes the amount of time spent thinking about what information to capture and how to best format that info. This allows the player to keep up with the action without being bogged down by thinking through what types of information to capture and how best to organize that information.
 
-### WIP Walkthrough
+Currently, users can create notes via a form with several different types inputs, each dedicated to information that is likely to be noted for a typical RPG note.
 
-The homepage provides links immediately create a new session log, view a collection of current campaign logs, access an item-storage manifest, and access a bank ledger (which includes an game-currency-converter tool).
+Full CRUD functionality exists for this notes feature. Users can create notes, edit those saved notes, and delete saved notes.
 
-#### Session Logs
+Notes are saved to a Firestore database provided by Firebase (which persists the CRUD functionality mentioned above).
 
-The main feature a user will interact with is the session log.
+In order to create and save notes users must first create an account and then log into that account. This authentication process is also managed through Firebase's suite of tools and methods.
 
-A session log represents the journal entries for a single RPG session. Playing a game on Thursday? You'll create and save a session log for Thursday's game. Playing again on Saturday? You'll create a separate session log for Saturday.
+### Utilities
 
-#### Campaigns
+In addition to the primary note taking feature of this app, several utilitiy mini-apps will also be present in future versions.
 
-All session logs are collected into a campaign component which displays all the session logs in a list that the user can interact with to view, edit, or delete logs as needed.
+#### Currency Converter
 
-#### Entry-Types
+The utility app bundled into the current version of The Tattered Tome provides a simple in-game-currency conversion tool.
 
-Entries are saved to a session log.
-
-To reduce note-taking friction the app provides the user with several entry-types to speed up the recording process.
-
-- Text:
-  - A freeform text field. Provides a simple text box that the user can save a basic text note to.
-- New Character
-  - Optional image upload tool for art of the newly-met character.
-  - Individual text fields for the following:
-    - Name
-    - Occupation
-    - Race and/or Class
-    - Location Met
-    - Alignment
-- New Quest
-- Combat Encounter
-- Quest Completed
-- Loot Found
+Users can enter an amount of currency into the appropriate currency input to calculate that currency's equivilent value in gold. Users can also calculate a grand total of all converted currencies that have been entered into the provided inputs.
 
 ---
 
 ## Technologies Used
 
-- _HTML / CSS_
-- _Node_
-- _React_
-- _JavaScript / JSX_
-- _Firebase / Firestore_
+- HTML / CSS
+- Node
+- React
+- JavaScript / JSX
+- Firebase / Firestore
+- Framer Motion
+- Styled Components
 
 ---
 
@@ -79,4 +64,5 @@ To reduce note-taking friction the app provides the user with several entry-type
 
 ## Known Bugs
 
-- N/A
+- Selecting "Calculate Total" in the currency converter tool will cause the function to repeatedly add whatever currency values are available each time the button is clicked, even if no values were changed. This results in an inaccurate total if the button is clicked more than one time.
+- Empty field forms can be submitted which results in rendering the field title for the note despite having no content associated with it.
